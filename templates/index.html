@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Euros a Pesos Colombianos</title>
+</head>
+<body>
+    <h1>Conversor de Euros a Pesos Colombianos</h1>
+    
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <label>Ingrese la cantidad de euros:</label>
+        <input type="text" name="euros" required>
+        <button type="submit">Convertir</button>
+    </form>
+
+    {% if resultado %}
+        <p>{{ resultado }}</p>
+    {% endif %}
+</body>
+</html>
